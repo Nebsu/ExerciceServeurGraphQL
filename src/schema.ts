@@ -11,6 +11,7 @@ export const typeDefs = gql`
     id: ID!
     name: String
     eye_color: String
+    eyeColor: String
     films: [Film]
   }
   type Doctor {

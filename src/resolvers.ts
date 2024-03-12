@@ -66,7 +66,7 @@ export const resolvers: Resolvers = {
         }
       }
       return res;
-    }
+    },
   },
   People: {
     films: (parent, args, context, info) => {
@@ -77,6 +77,9 @@ export const resolvers: Resolvers = {
         }
       }
       return res;
-    }
+    },
+    eyeColor: (parent, args, context, info) => {
+      return parent.eye_color;
+    },
   },
  };

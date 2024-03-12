@@ -47,6 +47,7 @@ export type Film = {
 
 export type People = {
   __typename?: 'People';
+  eyeColor?: Maybe<Scalars['String']['output']>;
   eye_color?: Maybe<Scalars['String']['output']>;
   films?: Maybe<Array<Maybe<Film>>>;
   id: Scalars['ID']['output'];
@@ -235,6 +236,7 @@ export type FilmResolvers<ContextType = DataSourceContext, ParentType extends Re
 };
 
 export type PeopleResolvers<ContextType = DataSourceContext, ParentType extends ResolversParentTypes['People'] = ResolversParentTypes['People']> = {
+  eyeColor?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   eye_color?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   films?: Resolver<Maybe<Array<Maybe<ResolversTypes['Film']>>>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
